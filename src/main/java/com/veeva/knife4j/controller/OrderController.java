@@ -11,20 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.TimeUnit;
 
-@Api(tags = "首页模块")
+@Api(tags = "订单模块")
 @RestController
-public class IndexController {
+public class OrderController {
 
-    @ApiImplicitParam(name = "name", value = "姓名", required = true)
-    @ApiOperation(value = "向客人问好")
-    @GetMapping("/sayHi")
-    public ResponseEntity<String> sayHi(@RequestParam(value = "name") String name) {
-        return ResponseEntity.ok("Hi:" + name);
-    }
-
-    @ApiOperationSupport(author = "sunshuo", order = 2)
-    @ApiOperation(value = "获取真实文档")
-    @GetMapping("/getRealDoc")
+    @ApiOperationSupport(author = "sunshuo", order = 3)
+    @ApiOperation(value = "获取真实文档4")
+    @GetMapping("/getRealDoc4")
     public ResponseEntity<String> getRealDoc() {
         ResponseEntity<String> realDoc = ResponseEntity.ok("Real Doc");
         try {
@@ -35,9 +28,9 @@ public class IndexController {
         return realDoc;
     }
 
-    @ApiOperationSupport(author = "sunshuo", order = 1)
-    @ApiOperation(value = "获取真实文档2")
-    @GetMapping("/getRealDoc2")
+    @ApiOperationSupport(author = "sunshuo", order = 2)
+    @ApiOperation(value = "获取真实文档3")
+    @GetMapping("/getRealDoc3")
     public ResponseEntity<String> getRealDoc2() {
         ResponseEntity<String> realDoc = ResponseEntity.ok("Real Doc");
         try {
