@@ -26,16 +26,7 @@ public class Knife4jConfiguration {
     @Bean(value = "veeva-v1")
     public Docket defaultApi2() {
         String groupName = "211.3.100";
-        Contact contact = new Contact("sunshuo@veeva.com", "", "");
-        ApiInfo apiInfo = new ApiInfoBuilder().title("swagger-bootstrap-ui-demo RESTful APIs")
-                                              .description("# swagger-bootstrap-ui-demo RESTful APIs")
-                                              .termsOfServiceUrl(
-                                                      "https://doc.xiaominfo.com/knife4j/documentation/get_start.html")
-                                              .contact(contact)
-                                              .version("1.0")
-                                              .build();
-
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo)
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo())
                                                       //分组名称
                                                       .groupName(groupName)
                                                       .select()
@@ -46,5 +37,15 @@ public class Knife4jConfiguration {
                                                       .build()
                                                       //赋予插件体系
                                                       .extensions(openApiExtensionResolver.buildExtensions(groupName));
+    }
+
+    private ApiInfo apiInfo() {
+        Contact contact = new Contact("sunshuo@veeva.com", "", "");
+        return new ApiInfoBuilder().title("swagger-bootstrap-ui-demo RESTful APIs")
+                                   .description("# swagger-bootstrap-ui-demo RESTful APIs")
+                                   .termsOfServiceUrl("https://doc.xiaominfo.com/knife4j/documentation/get_start.html")
+                                   .contact(contact)
+                                   .version("1.0")
+                                   .build();
     }
 }

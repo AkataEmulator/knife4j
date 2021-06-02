@@ -6,7 +6,7 @@ knife4j:
       name: 接口签名
       locations: classpath:sign/*
   setting:
-    language: zh-CN
+    language: en-US # or zh-CN
     enableSwaggerModels: true
     enableDocumentManage: true
     swaggerModelName: 实体类列表
