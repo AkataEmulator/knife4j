@@ -2,9 +2,13 @@ knife4j:
   enable: true
   documents:
     -
-      group: 2.X版本
-      name: 接口签名
-      locations: classpath:sign/*
+      group: 1.X版本
+      name: 接口签名1
+      locations: classpath:sign/api.md
+    -
+      group: 2.x
+      name: 自定义分组
+      locations: classpath:markdown/*
   setting:
     language: en-US # or zh-CN
     enableSwaggerModels: true
