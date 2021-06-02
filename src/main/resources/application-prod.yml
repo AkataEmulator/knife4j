@@ -1,0 +1,10 @@
+knife4j:
+  # 开启生产环境屏蔽
+  production: true
+  # 开启Swagger的Basic认证功能,默认是false,如果用户开启了basic认证功能,但是并未配置用户名及密码,Knife4j提供了默认的用户名和密码：admin/123321
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: test
+    # Basic认证密码
+    password: 12313

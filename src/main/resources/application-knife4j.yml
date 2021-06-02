@@ -1,12 +1,10 @@
 knife4j:
   enable: true
   documents:
-    -
-      group: 1.X版本
+    - group: 1.X版本
       name: 接口签名1
       locations: classpath:sign/api.md
-    -
-      group: 2.x
+    - group: 2.x
       name: 自定义分组
       locations: classpath:markdown/*
   setting:
@@ -33,8 +31,3 @@ knife4j:
     enableOpenApi: false
     enableGroup: true
   cors: false
-  production: false
-  basic:
-    enable: false
-    username: test
-    password: 12313
